@@ -1,0 +1,128 @@
+.app__nav
+{
+    width:100%;
+    display: flex;
+    border:2px solid black;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-black);
+    padding: 1rem 2rem;
+}
+
+
+.app__nav-logo
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.app__nav-logo img
+{
+    width:150px
+}
+.app__nav-links
+{
+   
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.app__nav-links li
+{
+    margin: 0 1rem;
+    cursor: pointer;
+}
+.app__nav-links li:hover
+{
+    color: var(--color-gray)
+}
+
+.app__nav-login
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.app__nav-login a
+{
+    margin: 0 0.5rem;
+    transition: 0.5s ease;
+   
+}
+.app__nav-login a:hover
+{
+    border-bottom: 1px solid var(--color-golden);
+}
+.app__nav-login div
+{
+    height: 30px;
+    width:1px;
+    background-color: var(--color-gray);
+}
+.app__navbar-smallscreen
+{
+    display: none;
+}
+.app__navbar-smallscreen-overlay
+{
+    position: fixed !important;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100vh;
+    background-color: var(--color-black);
+    z-index: 5;
+    flex-direction:column;
+    transition: 0.5s ease;
+
+}
+.app__navbar-smallscreen-overlay .overlay__close
+{
+    position: absolute;
+    top:20px;
+    right:20px;
+    color: var(--color-golden);
+    cursor: pointer;
+
+}
+.app__nav-links-sm
+{
+    list-style: none;
+   padding: 5rem 0 0 0 ;
+}
+.app__nav-links-sm li
+{
+    margin: 2rem;
+    cursor: pointer;
+    color:var(--color-golden);
+    font-size: 2rem;
+    text-align: center;
+    font-family: var(--font-base);
+}
+.app__nav-links-sm li:hover
+{
+    color: var(--color-white);
+}
+
+
+@media screen and (max-width:1150px) {
+    .app__navbar-smallscreen{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .app__nav-links
+    {
+        display: none;
+    }
+}
+
+@media screen and (max-width:650px){
+    .app__nav-login
+    {
+        display: none;
+    }
+    
+}
